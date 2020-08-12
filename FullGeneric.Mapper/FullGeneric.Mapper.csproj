@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0FCF97D0-E807-4629-B473-B61472BAFAD2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FullGeneric.Mapper</RootNamespace>
+    <AssemblyName>FullGeneric.Mapper</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TypeProviderMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FullGeneric.Data.Models\FullGeneric.Data.Models.csproj">
+      <Project>{6ACC5F89-8E56-4732-85DA-050E993CA8BB}</Project>
+      <Name>FullGeneric.Data.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FullGeneric.Data.Provider.LinqToSQL\FullGeneric.Data.Provider.LinqToSQL.csproj">
+      <Project>{C64AC4B6-5F33-4819-8C5D-D1A1B36A9F2A}</Project>
+      <Name>FullGeneric.Data.Provider.LinqToSQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FullGeneric.Data.Provider.XML\FullGeneric.Data.Provider.XML.csproj">
+      <Project>{FC194135-0D33-40E1-AB03-38923EDD7384}</Project>
+      <Name>FullGeneric.Data.Provider.XML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FullGeneric.Interfaces\FullGeneric.Interfaces.csproj">
+      <Project>{0CD64EEE-EDF5-495F-98D8-053928D9BB16}</Project>
+      <Name>FullGeneric.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
